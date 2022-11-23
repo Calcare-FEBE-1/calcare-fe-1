@@ -1,0 +1,40 @@
+footer .kiri img{
+    width: 75px;
+} 
+footer .kanan img{
+    width: 110px;
+}
+footer .container-fluid{
+    display: flex;
+    padding-top: 20px;
+    background-color: #40514E;
+    display: flex;
+}
+footer .kanan{
+    color: aliceblue;
+    width: 33%;
+}
+footer .kanan h5{
+    color: aliceblue;
+}
+footer .kiri{
+    color: aliceblue;
+    width: 33%;
+}
+footer .tengah{
+    color: aliceblue;
+    width: 33%;
+}
+footer .kiri h5{
+    padding-top: 10px;
+    color: #11999E;
+}
+footer .kiri .medsos{
+    color: aliceblue;
+} 
+footer .container-fluid{
+    padding-bottom: 10px;
+}
+footer h5{
+    font-weight: bold;
+}

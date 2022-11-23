@@ -1,0 +1,105 @@
+.pilihMakanan .section-atas{
+    display: flex;
+    flex-direction: column;
+}
+.pilihMakanan .backIcon a{
+    color: #11999E;
+}
+.pilihMakanan .teks{
+    padding-top: 3rem;
+}
+.pilihMakanan .teks h6{
+    color: #11999E;
+    font-weight: bold;
+    font-size: 32px;
+}
+.pilihMakanan .teks p{
+    font-size: 18px;
+    color: #11999E;
+    font-weight: lighter;
+}
+.pilihMakanan #search{
+    margin-right: 20px;
+    border-color: #11999E !important;
+}
+.pilihMakanan #submit{
+    margin: 0;
+    color: white;
+    background-color: gray !important;
+    border-color: gray !important;
+}
+.pilihMakanan #submit:hover{
+    background-color: #11999E !important;
+    border-color: #11999E !important;
+}
+.pilihMakanan form button{
+    border: grey !important;
+    color: white !important;
+    background-color: gray !important;
+}
+.pilihMakanan form button:hover{
+    border: #11999E !important;
+    background-color: #11999E !important;
+}
+
+
+.pilihMakanan #main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+ .card-body h5{
+    font-weight: bold;
+}
+.pilihMakanan #protein{
+    color: orange;
+}
+.pilihMakanan #kalori{
+    color: green
+    ;
+}
+.pilihMakanan #karbohidrat{
+    color: rgb(30, 0, 255);
+}
+.pilihMakanan #fat{
+    color: rgb(224, 0, 0)
+    ;
+}
+.pilihMakanan #pilih{
+    background-color: #11999E !important;
+    border: #11999E !important;
+}
+.pilihMakanan #pilih:hover{
+    background-color: #0f868a !important;
+}
+.pilihMakanan #detail{
+    background-color: gray !important;
+    border: gray !important;
+}
+.pilihMakanan #detail:hover{
+    background-color: rgb(107, 106, 106) !important;
+}
+@media only screen and (min-width: 768px ) and (max-width: 1115px) {
+    .pilihMakanan .card{
+        width: 250px;
+    }
+  }
+@media only screen and (max-width: 767px )  {
+    .pilihMakanan .card{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .pilihMakanan #main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+  }
+@media only screen and (min-width: 1116px) {
+    .pilihMakanan #main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+  }
