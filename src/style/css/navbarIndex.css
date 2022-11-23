@@ -1,0 +1,28 @@
+nav img{
+    width: 54px;
+}
+nav ul li .nav-link{ 
+    font-family: 'Nunito Sans', sans-serif;
+    color: #11999E !important;
+}
+nav .navbar-brand{
+    padding-left: 10px;
+}
+main h1{
+    font-weight: 950;
+    padding-top: 5rem;
+    font-family: 'Nunito', sans-serif;
+}
+nav .nav-item .btn{
+    background-color: #11999E !important;
+    border-color: #11999E !important;
+}
+nav .container-fluid{
+    background-color: transparent !important;
+}
+@media only screen and (max-width: 991px){
+    #toggle{
+        padding: 10px;
+        background-color: white !important;
+    }
+}

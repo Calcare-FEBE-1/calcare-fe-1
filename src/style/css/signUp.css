@@ -1,0 +1,126 @@
+main > .container{
+    margin-top: 80px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px #B2C5C1;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    color: #11999E;
+}
+header p{
+    display: flex;
+    justify-content: center;
+}
+header h4{
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+}
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+form label h6{
+    font-weight: 900;
+    color: #11999E;
+}
+form .container{
+    display: flex;
+    flex-direction: row;
+}
+.formKiri{
+    width: 50%;
+    margin-right: 3rem;
+}
+.formKiri input{
+    border-color: #11999E !important;
+}
+.formKiri select{
+    border-color: #11999E !important;
+    color: gray;
+}
+.formKanan{
+    width: 50%;
+}
+.formKanan select{
+    border-color: #11999E !important;
+    color: gray;
+}
+
+.formKanan input{
+    border-color: #11999E !important;
+}
+form p{
+    display: flex;
+    justify-content: center;
+}
+form #atau {
+    font-weight: bold;
+    color: gray !important;
+}
+form a{
+    color: #11999E;
+    text-decoration: none;
+    font-weight: bold;
+}
+form button{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+#massage{
+    color: red;
+}
+.signUp .container #signUp{
+    width: 50%;
+    color: white !important;
+    background-color: grey !important ;
+    border-color: grey !important;
+}
+.signUp #signUp:hover{
+    background-color:  #11999E!important;
+    border-color: #11999E !important;
+    box-shadow: 2px 3px 5px rgb(39, 39, 39);
+}
+.signUp #google{
+    width: 50%;
+    color: #40514E;
+    background-color: transparent !important;
+    border-color: grey !important;
+}
+.signUp #google:hover{
+    color: white;
+    background-color:  #11999E!important;
+    box-shadow: 2px 3px 5px rgb(39, 39, 39);
+}
+.signUp #facebook{
+    width: 50%;
+    color: #40514E;
+    background-color: transparent !important;
+    border-color: grey !important;
+}
+.signUp #facebook:hover{
+    color: white;
+    background-color:  #11999E!important;
+    box-shadow: 2px 3px 5px rgb(39, 39, 39);
+}
+@media only screen and (max-width: 576px) {
+    form .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .formKiri,.formKanan{
+        width: 100%;
+        margin: 0;
+    }
+    main > .container{
+        box-shadow: none;
+    }
+    form button{
+        width: 95%;
+    }
+  }

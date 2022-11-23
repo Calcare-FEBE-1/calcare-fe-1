@@ -1,0 +1,119 @@
+.logIn main .container-fluid{
+    padding: 80px;
+    background: linear-gradient(white, #DCF8F8);
+    padding-bottom: 100px;
+}
+.logIn main .container {
+    background-color: white;
+    position: relative;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px #B2C5C1;
+}
+.logIn main .container .kiri{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-radius: 24px 0 0 24px;
+    background-color: #DCF8F8;
+    }
+.logIn main .container .kiri img{
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+.logIn main .container .kanan{
+    text-decoration: none;
+    padding-bottom: 30px;
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 40px;
+}
+.logIn main header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.logIn main .container .kanan header img{
+    width: 64px;
+}
+.logIn header h3,h4,#Privacy,#Terms,#daftar{
+    font-weight: bold;
+    color: #11999E;
+    text-decoration: none;
+}
+.logIn .kanan form #login{
+    border-radius: 12px;
+    border-color: #8a8a8a;
+    font-weight: 900;
+    width: 100%;
+    background-color: #8a8a8a !important;
+}
+.logIn .kanan form #login:hover{
+    background-color: #11999E !important;
+    border-color: #11999E !important;
+    box-shadow: 2px 3px 5px rgb(39, 39, 39);
+}
+.logIn  .kanan form #google{
+    border-radius: 12px;
+    color: #8a8a8a;
+    width: 100%;
+    background-color: transparent !important;
+    border-color: #11999E;;
+}
+.logIn .kanan form #google:hover{
+    color: white;
+    background-color:  #11999E !important;
+    box-shadow: 2px 3px 5px rgb(39, 39, 39);
+}
+.logIn .kanan form #facebook{
+    border-radius: 12px;
+    border-color: #11999E !important;
+    color: #8a8a8a !important;
+    width: 100%;
+    background-color: transparent !important;
+}
+.logIn .kanan form #facebook:hover{
+    color: white;
+    background-color:  #11999E !important;
+    box-shadow: 2px 3px 5px rgb(39, 39, 39);
+}
+.kanan form{
+    width: 100%;
+}
+.logIn .form-control{
+    width: 100%;
+}
+.mb-3{
+    width: 100%;
+}
+.logIn input{
+    border-color: #11999E;
+}
+.logIn #emailStatus{
+    color: red;
+}
+.logIn #passwordStatus{
+    color: red;
+}
+@media only screen and (max-width: 767px){
+    .logIn main .container .kiri{
+        display: none;
+        }
+        .logIn main .container .kanan{
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .logIn .container .kanan header{
+        display: flex;
+        justify-content: center;
+    }
+}
