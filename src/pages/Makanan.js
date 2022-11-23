@@ -5,30 +5,30 @@ import { Link } from 'react-router-dom'
 import {IoChevronBack} from 'react-icons/io5'
 import Navbar from "../components/Navbar";
 
-const Makanan = () => {
+const Makanan = (props) => {
     return(
         <div className="makanan">
             <Navbar/>
             <main>
-            <div class="container-fluid">
-            <div class="container section-atas">
-                <div class="row backIcon">
-                    <Link className="back" to='/Home'><IoChevronBack size={35}/></Link>
+            <div className="container-fluid">
+            <div className="container section-atas">
+                <div className="row backIcon">
+                    <Link className="back" to='/Homepage'><IoChevronBack size={35}/></Link>
                 </div>
-                <div class="teks">
-                    <h6 class="heading">Daftar Pilihan Makanan</h6>
+                <div className="teks">
+                    <h6 className="heading">Daftar Pilihan Makanan</h6>
               
-                    <p class="paragraf">Pilihlah makanan yang sesuai dengan yang kamu makan dari daftar yang tersedia. Jika tidak ada, coba gunakan fitur pencarian</p>
+                    <p className="paragraf">Pilihlah makanan yang sesuai dengan yang kamu makan dari daftar yang tersedia. Jika tidak ada, coba gunakan fitur pencarian</p>
                 </div>
-                <div class="date">
-                    <input type="date" name="date" class="tanggal"/>
+                <div className="date">
+                    <input type="date" name="date" className="tanggal"/>
                 </div>
                 
             </div>
             
-            <div class="container section-makanan">
-                <div class="container section-makan-pagi">
-                    <table class="table tbl-pagi table-borderless">
+            <div className="container section-makanan">
+                <div className="container section-makan-pagi">
+                    <table className="table tbl-pagi table-borderless">
                         <thead>
                           <tr>
                             <th scope="col" style={{backgroundColor : '#B8DB70', width:'35rem'}} className="keterangan">Makan Pagi</th>
@@ -39,14 +39,14 @@ const Makanan = () => {
                             <th scope="col" style={{backgroundColor : 'white', color:'#11999E'}}>Kal</th>
                           </tr>
                         </thead>
-                        <tbody class="baris-makan-pagi">
+                        <tbody className="baris-makan-pagi">
                           <tr >
-                            <td>name</td>
+                            <td>{props.name}</td>
                             <td></td>
-                            <td>fat</td>
-                            <td>carbo</td>
-                            <td>protein</td>
-                            <td id="kalori">calorie</td>
+                            <td>{props.fat}</td>
+                            <td>{props.carbohydrate}</td>
+                            <td>{props.protein}</td>
+                            <td id="kalori">{props.calories}</td>
                           </tr>
                         </tbody>
                       </table>
@@ -56,15 +56,15 @@ const Makanan = () => {
                 
             </div>
 
-            <div class='container section-tengah' style={{justifyContent: 'center'}}>
-                <div class="tambah-item ">
-                    <button class="tmbh-item-pagi"><Link to="/pilihMakanan">+ Tambahkan item</Link></button>
+            <div className='container section-tengah' style={{justifyContent: 'center'}}>
+                <div className="tambah-item ">
+                    <button className="tmbh-item-pagi"><Link to="/pilihMakanan">+ Tambahkan item</Link></button>
                 </div>
             </div>
 
-            <div class="container section-bawah" style={{justifyContent: 'center'}}>
-              <button type="button" class="btn-lg kalori-btn" ><Link className="track-kal" to='/TrackCal'> Track Kalori</Link></button>
-                <button type="button" class="btn-lg karbon-btn" > <Link className="track-karbon" to='/TrackCarbon'>Track Karbon</Link></button>
+            <div className="container section-bawah" style={{justifyContent: 'center'}}>
+              <button type="button" className="btn-lg kalori-btn" ><Link className="track-kal" to='/TrackCal'> Track Kalori</Link></button>
+                <button type="button" className="btn-lg karbon-btn" > <Link className="track-karbon" to='/TrackCarbon'>Track Karbon</Link></button>
             </div>
         </div>
             </main>

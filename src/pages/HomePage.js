@@ -9,7 +9,6 @@ import G4 from '../assets/img/4.jpeg'
 import { Link } from 'react-router-dom'
 import "../style/css/homePage.css"
 
-
 const HomePage = () => {
   return (
     <div>
@@ -31,7 +30,7 @@ const HomePage = () => {
                                 Daftar sekarang dan nikmati fitur - fitur menarik
                                 dari kami
                             </p>
-                            <Link className="btn btn-primary" to="/TrackCal">Track Kalori</Link>
+                            <Link className="btn btn-primary" to="/pilihMakanan">Track Kalori</Link>
                         </section>
                         <aside>
                             <img src={HompePageFoto} alt=""/>
