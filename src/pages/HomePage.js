@@ -30,7 +30,7 @@ const HomePage = () => {
                                 Daftar sekarang dan nikmati fitur - fitur menarik
                                 dari kami
                             </p>
-                            <Link className="btn btn-primary" to="/pilihMakanan">Track Kalori</Link>
+                            <Link className="btn btn-primary" to="/TrackCal">Track Kalori</Link>
                         </section>
                         <aside>
                             <img src={HompePageFoto} alt=""/>

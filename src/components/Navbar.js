@@ -30,7 +30,7 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarToggler">
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0" id="toggle">
                     <li className="nav-item">
-                        <Link className="nav-link" >Makanan</Link>
+                        <Link className="nav-link" to='/pilihMakanan' >Makanan</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" >Tracking Kalori</Link>

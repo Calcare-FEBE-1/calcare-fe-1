@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import "../style/css/pilihMakanan.css"
 import "../style/css/card.css"
+import {IoChevronBack} from 'react-icons/io5'
 
 const PilihMakanan = () => {
     const [post, setPost] = useState([])
@@ -30,7 +31,7 @@ const PilihMakanan = () => {
                 <div className="container-fluid">
                     <div className="container section-atas">
                         <div className="row backIcon">
-                            <a href="makanan.html" className="" id="back"><i className="fa-solid fa-chevron-left fa-2xl"></i></a>
+                            <a href="makanan.html" className="" id="back"><IoChevronBack size={35}/></a>
                         </div>
                         <div className="teks">
                             <h6 className="heading">Daftar Pilihan Makanan</h6>
