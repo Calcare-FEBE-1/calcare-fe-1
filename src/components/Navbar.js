@@ -33,13 +33,13 @@ const Navbar = () => {
                         <Link className="nav-link" to='/pilihMakanan' >Makanan</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" >Tracking Kalori</Link>
+                        <Link className="nav-link" to='/TrackCal'>Tracking Kalori</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" >Tracking Diet</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" >Dampak Karbon</Link>
+                        <Link className="nav-link" to='/TrackKarbon'>Dampak Karbon</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="btn btn-primary" to="/LogIn">Keluar</Link>
