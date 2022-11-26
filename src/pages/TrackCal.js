@@ -6,6 +6,7 @@ import {Chart as ChartJs, Tooltip, Title, ArcElement, Legend} from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import {IoChevronBack} from 'react-icons/io5'
 import Navbar from '../components/Navbar'
+import DOMPurify from 'dompurify'
 
 ChartJs.register(
     Tooltip, Title, ArcElement, Legend
@@ -79,7 +80,28 @@ const [dataKarbon, setDataKarbon] = useState({
 ],
 
 });
-  
+
+    const [hitung, setHitung] = useState('');
+
+    useEffect(() => {
+      var beratbadan = localStorage.getItem('berat');
+      var tinggibadan = localStorage.getItem('tinggi');
+      var jeniskelamin = localStorage.getItem('kelamin');
+      var umur = localStorage.getItem('umur');
+      var kalori = localStorage.getItem('kalori');
+      var hitung = '' 
+      if(jeniskelamin === 'Laki'){
+        hitung = (66.5 + (13.75 * beratbadan) + (5.003 * tinggibadan) - (6.75 * umur));
+
+      } else if( jeniskelamin === 'Perempuan'){
+        hitung = (655.1 + (9.563 * beratbadan ) + (1.850 * tinggibadan) - (4.676 * umur));
+      } else{
+        alert('Data Tidak Ditemukan')
+      }
+      localStorage.setItem('hitung', JSON.stringify(hitung));
+    }, [hitung]);
+
+    
 
 
 
@@ -114,11 +136,11 @@ const [dataKarbon, setDataKarbon] = useState({
                           <div className="col-md-3">
                             <div className="card-body">
                               <h5 className="card-title">Dibutuhkan</h5>
-                              <p className="card-text" style={{fontWeight:'bold', fontStyle:'normal'}}> <span className="fw-bold" id="hitung-cal"></span>  Kkal</p>
+                              <p className="card-text" style={{fontWeight:'bold', fontStyle:'normal'}}> <span className="fw-bold" id="hitung-cal" >{localStorage.getItem('hitung')}</span>  Kkal</p>
                             </div>
                             <div className="card-body">
                                 <h5 className="card-title">Terpenuhi</h5>
-                                <p className="card-text"> <span className="fw-bold" id="cal-terpenuhi"></span> Kkal</p>
+                                <p className="card-text"> <span className="fw-bold" id="cal-terpenuhi" ></span> Kkal</p>
                               </div>
                           </div>
                         </div>
