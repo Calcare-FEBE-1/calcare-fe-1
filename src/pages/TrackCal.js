@@ -89,7 +89,7 @@ const [dataKarbon, setDataKarbon] = useState({
       var jeniskelamin = localStorage.getItem('kelamin');
       var umur = localStorage.getItem('umur');
       var kalori = localStorage.getItem('kalori');
-      var hitung = ''
+      var hitung = '' 
       if(jeniskelamin === 'Laki'){
         hitung = (66.5 + (13.75 * beratbadan) + (5.003 * tinggibadan) - (6.75 * umur));
 
