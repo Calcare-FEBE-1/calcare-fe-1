@@ -55,6 +55,7 @@ main .container-fluid{
 .track-left
 {
 	border-top: 1px solid #f9f9f9;
+    justify-content: center;
 }
 
 .track-left:last-child { margin-bottom: -30px; }
