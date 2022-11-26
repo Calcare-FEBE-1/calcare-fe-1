@@ -44,6 +44,9 @@ const SignUp = () => {
             }
         }
     
+
+
+    
   return (
     <div className='signUp'>
 
@@ -114,7 +117,7 @@ const SignUp = () => {
                             <select className="form-select" id="kelamin" name="kelamin"  value={kelamin} onChange={(e)=> setKelamin(e.target.value
                                 )}>
                                 <option selected>Pilih Jenis Kelamin</option>
-                                <option value="Laki - Laki">Laki - Laki</option>
+                                <option value="Laki">Laki - Laki</option>
                                 <option value="Perempuan">Perempuan</option>
                             </select>
                             {errors && kelamin.length<=0 ? <p id='massage'>Jenis kelamin tidak boleh kosong</p> :""}
