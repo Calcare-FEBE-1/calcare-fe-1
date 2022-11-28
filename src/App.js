@@ -4,6 +4,7 @@ import Index from './pages/Index';
 import LogIn from './pages/LogIn';
 import Makanan from './pages/Makanan';
 import PilihMakanan from './pages/PilihMakanan';
+import Profil from './pages/Profil';
 import SignUp from './pages/SingUp';
 import TrackCal from './pages/TrackCal';
 import TrackKarbon from './pages/TrackKarbon';
@@ -20,6 +21,7 @@ function App() {
         <Route path='/Makanan' element={<Makanan/>}/>
         <Route path='/pilihMakanan'element={<PilihMakanan/>} />
         <Route path='/TrackKarbon'element={<TrackKarbon/>} />
+        <Route path='/profil'element={<Profil/>} />
       </Routes>
     </>
   );
