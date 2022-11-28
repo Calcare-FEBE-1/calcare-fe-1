@@ -19,6 +19,7 @@ const Profil = () => {
   return (
     <>    
     <Navbar/>
+    
     <div className='profil'>
             <main>
                 <div className="container-fluid">

@@ -20,6 +20,7 @@ function App() {
         <Route path='/Makanan' element={<Makanan/>}/>
         <Route path='/pilihMakanan'element={<PilihMakanan/>} />
         <Route path='/profil'element={<Profil/>} />
+        
       </Routes>
     </>
   );
