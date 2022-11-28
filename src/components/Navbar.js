@@ -42,6 +42,9 @@ const Navbar = () => {
                         <Link className="nav-link" to='/TrackKarbon'>Dampak Karbon</Link>
                     </li>
                     <li className="nav-item">
+                        <Link className="nav-link" to='/AboutUs'>About</Link>
+                    </li>
+                    <li className="nav-item">
                         <Link className="btn btn-primary" to="/LogIn">Keluar</Link>
                     </li>
                     <li className="nav-item">
