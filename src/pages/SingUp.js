@@ -3,6 +3,7 @@ import '../style/css/signUp.css'
 import Footer from '../components/Footer'
 import NavbarIndex from '../components/NavbarIndex'
 import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const SignUp = () => {
     
@@ -10,37 +11,64 @@ const SignUp = () => {
         const [nama, setNama ] = useState("");
         const [email, setEmail ] = useState("");
         const [pass, setPass ] = useState("");
-        const [confirmPass, setConfirmPass ] = useState("");
+        //const [confirmPass, setConfirmPass ] = useState("");
         const [tinggi, setTinggi ] = useState("");
         const [berat, setBerat ] = useState("");
-        const [nomorTelepon, setNomorTelepon ] = useState("");
+        //const [nomorTelepon, setNomorTelepon ] = useState("");
         const [aktivitas, setAktivitas ] = useState("");
         const [kelamin, setKelamin ] = useState("");
         const [umur, setUmur ] = useState("");
-        const [errors, setErrors] = useState(false)
+        const [errors, setErrors] = useState(false);
+        const [alert, setAlert] = useState('')
+
         const handleSubmit = (e) =>{
             e.preventDefault();
-            if(nama.length==0 || email.length==0 || pass.length==0 || confirmPass.length==0 || tinggi.length==0 || berat.length==0 ||aktivitas.length==0 || kelamin.length==0 ||umur.length==0 ||nomorTelepon.length==0){
+            const data = {
+                nama: nama,
+                email: email,
+                pass: pass,
+                tinggi: tinggi,
+                berat: berat,
+                aktivitas: aktivitas,
+                kelamin: kelamin,
+                umur: umur
+
+            }
+            if(nama.length==0 || email.length==0 || pass.length==0 || /*confirmPass.length==0 ||*/ tinggi.length==0 || berat.length==0 ||aktivitas.length==0 || kelamin.length==0 ||umur.length==0 /*||nomorTelepon.length==0*/){
                 setErrors(true)
             }
             else if(!/\S+@\S+\.\S+/.test(email)){
                 setErrors(true)
             }
-            else if(confirmPass !== pass){
+            /*else if(confirmPass !== pass){
                 setErrors(true)
-            }
+            }*/
             else{
-                navigate("/LogIn")
+                axios.post('https://eight-eye-production.up.railway.app/auth/register', data)
+                .then(result =>{
+                    if(result){
+                        if(result.data){
+                            setEmail('')
+                            setPass('')
+                            setAlert(result.data.message)
+                            setTimeout(() => {
+                                setAlert('')
+                            }, 3000)
+                            navigate('/LogIn')
+                        }
+                    }
+                })
+                /*navigate("/LogIn")
                 localStorage.setItem("nama",nama);
                 localStorage.setItem("email",email);
-                localStorage.setItem("nomorTelepon",nomorTelepon);
+                //localStorage.setItem("nomorTelepon",nomorTelepon);
                 localStorage.setItem("pass",pass);
-                localStorage.setItem("confirmPass",confirmPass);
+                //localStorage.setItem("confirmPass",confirmPass);
                 localStorage.setItem("kelamin",kelamin);
                 localStorage.setItem("tinggi",tinggi);
                 localStorage.setItem("berat",berat);
                 localStorage.setItem("umur",umur);
-                localStorage.setItem("aktivitas",aktivitas);
+                localStorage.setItem("aktivitas",aktivitas);*/
             }
         }
     
@@ -80,7 +108,7 @@ const SignUp = () => {
                             <p id='massage'>Email tidak boleh kosong</p> :""}
                             {errors && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email) ? <p id='massage'>Email tidak boleh kosong</p> :"" }
                         </div>
-                        <div className="mb-3">
+                        {/* <div className="mb-3">
                             <label htmlFor="nomorTelepon" className="form-label">
                                 <h6>Nomor Telepon</h6>
                             </label>
@@ -88,7 +116,7 @@ const SignUp = () => {
                                  placeholder="Nomor Telepon"  value={nomorTelepon} onChange={(e)=> setNomorTelepon(e.target.value
                                 )}/>
                             {errors && nomorTelepon.length<=0 ? <p id='massage'>Nomor telepon tidak boleh kosong</p> :""}
-                        </div>
+                        </div> */}
                         <div className="mb-3">
                             <label htmlFor="pass" className="form-label">
                                 <h6>Password</h6>
@@ -98,7 +126,7 @@ const SignUp = () => {
                                 )}/>
                             {errors && pass.length<=0 ? <p id='massage'>Password tidak boleh kosong</p> :""}
                         </div>
-                        <div className="mb-3">
+                        {/* <div className="mb-3">
                             <label htmlFor="confirmPass" className="form-label">
                                 <h6>Konfirmasi Password</h6>
                             </label>
@@ -107,7 +135,7 @@ const SignUp = () => {
                                 )}/>
                             {errors && confirmPass.length<=0 ? <p id='massage'>Konfirmasi password tidak boleh kosong</p> :""}
                             {errors && confirmPass !== pass ? <p id='massage'>Konfirmasi password tidak sama dengan password yang telah dimasukkan sebelumnya</p> :""}
-                        </div>
+                        </div> */}
                     </div>
                     <div className="formKanan">
                         <div className="mb-3">

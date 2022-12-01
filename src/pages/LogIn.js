@@ -5,27 +5,68 @@ import CalcareLogo from '../assets/img/CalcareLogo.png'
 import LogoLogin from '../assets/img/logoLogin.png'
 import '../style/css/logIn.css'
 import { Link,  useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const LogIn = () => {
     const navigate = useNavigate()
     const [pass, setPass] = useState("")
     const [email, setEmail] = useState("")
-    const userPass = localStorage.getItem("pass")
-    const userEmail = localStorage.getItem("email")
+    /*const userPass = localStorage.getItem("pass")
+    const userEmail = localStorage.getItem("email")*/
     const [errors, setErrors] = useState(false)
+    const [error, setError] = useState('')
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        if(email === userEmail && pass === userPass){
-            navigate('/Home')
+        const data ={
+            email: email,
+            password: pass
+        }
+        if(!email){
+            setError('Email tidak boleh kosong!')
+        } else if (!pass) {
+            setError('Password tidak boleh kosong!')
+        } else if (!email && !pass){
+            setError('Email dan Password tidak boleh kosong!')
+        } else{
+            console.log(data)
+            axios.post('https://eight-eye-production.up.railway.app/auth/login-user', data)
+            .then(result =>{
+                console.log(result)
+                //console.log("bebas")
+                if(result){
+                localStorage.setItem('token', result.data.token)
+                navigate('/Home')
+                //alert('Succes Login')
+                // setRedirect(true)
+            }
+
+            // console.log(result)
+
+        })
+        .catch(e =>{
+            setError(e)
+        })
+    }
+        /*if(email === userEmail && pass === userPass){
+            console.log(data)
+            axios.post('https://eight-eye-production.up.railway.app/auth/login', data)
+            .then(result =>{
+                if(result){
+                    localStorage.setItem('token', result.data.token)
+                    navigate('/Home')
+                }
+            })
         }
         else if(email == 0 || pass == 0){
             setErrors(true)
         }
-        else{
+        else if (email !== userEmail && pass !== userPass){
             navigate('/logIn')
             alert("wrong")
-        }
+        } else{
+            alert('User Tidak Ditemukan')
+        }*/
     }
   return (
     <div>
