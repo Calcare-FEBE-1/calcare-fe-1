@@ -30,7 +30,7 @@ const LogIn = () => {
             setError('Email dan Password tidak boleh kosong!')
         } else{
             console.log(data)
-            axios.post('https://eight-eye-production.up.railway.app/auth/login-user', data)
+            axios.post('https://testing-calcare.up.railway.app/auth/login-user', data)
             .then(result =>{
                 console.log(result)
                 //console.log("bebas")
