@@ -162,6 +162,20 @@ const SignUp = () => {
                                 )}/>
                             {errors && pass.length<=0 ? <p id='massage'>Password tidak boleh kosong</p> :""}
                         </div>
+                        <div className="mb-3">
+                            <label htmlFor="aktivitas" className="form-label">
+                                <h6>Aktivitas Fisik</h6>
+                            </label>
+                                <select className="form-select" id="aktivitas" name="aktivitas"
+                                 value={aktivitas} onChange={(e)=> setAktivitas(e.target.value
+                                )}>
+                                    <option  selected>Pilih Aktivitas Fisik</option>
+                                    <option value="Sering Berolahraga">Sering Berolahraga</option>
+                                    <option value="Jarang Berolahraga">Jarang Berolahraga</option>
+                                    <option value="Tidak Pernah Berolahraga">Tidak Pernah Berolahraga</option>
+                                </select>
+                                {errors && aktivitas.length<=0 ? <p id='massage'>Aktivitas tidak boleh kosong</p> :""}
+                        </div>
                         {/* <div className="mb-3">
                             <label htmlFor="confirmPass" className="form-label">
                                 <h6>Konfirmasi Password</h6>
@@ -213,20 +227,7 @@ const SignUp = () => {
                                 )}/>
                             {errors && umur.length<=0 ? <p id='massage'>Umur tidak boleh kosong</p> :""}
                         </div>
-                        <div className="mb-3">
-                            <label htmlFor="aktivitas" className="form-label">
-                                <h6>Aktivitas Fisik</h6>
-                            </label>
-                                <select className="form-select" id="aktivitas" name="aktivitas"
-                                 value={aktivitas} onChange={(e)=> setAktivitas(e.target.value
-                                )}>
-                                    <option  selected>Pilih Aktivitas Fisik</option>
-                                    <option value="Sering Berolahraga">Sering Berolahraga</option>
-                                    <option value="Jarang Berolahraga">Jarang Berolahraga</option>
-                                    <option value="Tidak Pernah Berolahraga">Tidak Pernah Berolahraga</option>
-                                </select>
-                                {errors && aktivitas.length<=0 ? <p id='massage'>Aktivitas tidak boleh kosong</p> :""}
-                        </div>
+                        
                     </div>
                 </div>
 
