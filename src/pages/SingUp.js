@@ -19,58 +19,94 @@ const SignUp = () => {
         const [kelamin, setKelamin ] = useState("");
         const [umur, setUmur ] = useState("");
         const [errors, setErrors] = useState(false);
-        const [alert, setAlert] = useState('')
+        //const [alert, setAlert] = useState('')
+
 
         const handleSubmit = (e) =>{
-            e.preventDefault();
-            const data = {
-                nama: nama,
-                email: email,
-                pass: pass,
-                tinggi: tinggi,
-                berat: berat,
-                aktivitas: aktivitas,
-                kelamin: kelamin,
-                umur: umur
+            e.preventDefault()
+    
+            var config ={
+                method:'post',
+                url: 'https://testing-calcare.up.railway.app/auth/register-user',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: {
+                    nama: nama,
+                    email: email,
+                    password: pass,
+                    tinggi_badan: tinggi,
+                    berat_badan: berat,
+                    umur: umur,
+                    jenis_kelamin: kelamin,
+                    aktivitas_fisik: aktivitas
 
-            }
-            if(nama.length==0 || email.length==0 || pass.length==0 || /*confirmPass.length==0 ||*/ tinggi.length==0 || berat.length==0 ||aktivitas.length==0 || kelamin.length==0 ||umur.length==0 /*||nomorTelepon.length==0*/){
-                setErrors(true)
-            }
-            else if(!/\S+@\S+\.\S+/.test(email)){
-                setErrors(true)
-            }
-            /*else if(confirmPass !== pass){
-                setErrors(true)
-            }*/
-            else{
-                axios.post('https://eight-eye-production.up.railway.app/auth/register', data)
-                .then(result =>{
-                    if(result){
-                        if(result.data){
-                            setEmail('')
-                            setPass('')
-                            setAlert(result.data.message)
-                            setTimeout(() => {
-                                setAlert('')
-                            }, 3000)
-                            navigate('/LogIn')
-                        }
-                    }
-                })
-                /*navigate("/LogIn")
-                localStorage.setItem("nama",nama);
-                localStorage.setItem("email",email);
-                //localStorage.setItem("nomorTelepon",nomorTelepon);
-                localStorage.setItem("pass",pass);
-                //localStorage.setItem("confirmPass",confirmPass);
-                localStorage.setItem("kelamin",kelamin);
-                localStorage.setItem("tinggi",tinggi);
-                localStorage.setItem("berat",berat);
-                localStorage.setItem("umur",umur);
-                localStorage.setItem("aktivitas",aktivitas);*/
-            }
+                }
+            };
+    
+            axios(config)
+            .then(function(response){
+                console.log("sukses", response);
+                navigate('/LogIn')
+                alert("Register Sukses")
+                
+            })
+            .catch(function(error){
+                console.log('ini respon eror', error);
+                //alert(error.response.data.message)
+            });
         }
+
+        // const handleSubmit = (e) =>{
+        //     e.preventDefault();
+        //     const data = {
+        //         nama: nama,
+        //         email: email,
+        //         pass: pass,
+        //         tinggi: tinggi,
+        //         berat: berat,
+        //         aktivitas: aktivitas,
+        //         kelamin: kelamin,
+        //         umur: umur
+
+        //     }
+        //     if(nama.length==0 || email.length==0 || pass.length==0 || /*confirmPass.length==0 ||*/ tinggi.length==0 || berat.length==0 ||aktivitas.length==0 || kelamin.length==0 ||umur.length==0 /*||nomorTelepon.length==0*/){
+        //         setErrors(true)
+        //     }
+        //     else if(!/\S+@\S+\.\S+/.test(email)){
+        //         setErrors(true)
+        //     }
+        //     /*else if(confirmPass !== pass){
+        //         setErrors(true)
+        //     }*/
+        //     else{
+        //         axios.post('https://eight-eye-production.up.railway.app/auth/register', data)
+        //         .then(result =>{
+        //             if(result){
+        //                 if(result.data){
+        //                     setEmail('')
+        //                     setPass('')
+        //                     setAlert(result.data.message)
+        //                     setTimeout(() => {
+        //                         setAlert('')
+        //                     }, 3000)
+        //                     navigate('/LogIn')
+        //                 }
+        //             }
+        //         })
+        //         /*navigate("/LogIn")
+        //         localStorage.setItem("nama",nama);
+        //         localStorage.setItem("email",email);
+        //         //localStorage.setItem("nomorTelepon",nomorTelepon);
+        //         localStorage.setItem("pass",pass);
+        //         //localStorage.setItem("confirmPass",confirmPass);
+        //         localStorage.setItem("kelamin",kelamin);
+        //         localStorage.setItem("tinggi",tinggi);
+        //         localStorage.setItem("berat",berat);
+        //         localStorage.setItem("umur",umur);
+        //         localStorage.setItem("aktivitas",aktivitas);*/
+        //     }
+        // }
     
 
 
