@@ -1,0 +1,73 @@
+.profil main{
+    margin: 0;
+    padding: 0;
+}
+.profil main .container-fluid {
+    box-shadow: none;
+    background: none;
+    margin-bottom: 70px;
+}
+.profil .section-main{
+    padding: 0;
+    border-radius: 20px;
+    box-shadow: 0 0 5px gray;
+}
+.profil .kiri{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    border-radius: 20px 0 0 20px;
+    background-color: #AFEFE3;
+}
+.profil .kiri img{
+    padding: 10px;
+    width: 75%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #11999E;
+}
+.profil .kanan{
+    color: #11999E ;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.profil .content{
+    color: #11999E ;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profil .kanan .section-kiri{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.profil .kanan .section-kanan{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.profil .kanan .section-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profil .kiri h4{
+    font-family: 'Nunito', sans-serif;
+    color: #40514E;
+    font-weight: bold;
+}
+.profil .kiri h5{
+    font-family: 'Nunito Sans';
+    color: gray;
+}
+
