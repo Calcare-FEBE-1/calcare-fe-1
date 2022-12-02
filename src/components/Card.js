@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
+import {useCart} from 'react-use-cart';
 
 const Card = (props) => {
-    
-    
     
     
   return (
@@ -19,7 +18,7 @@ const Card = (props) => {
                 </div>
                 <div className="card-footer">
                     <div className="card-button">
-                        <button  className="btn btn-primary me-2" id="pilih"  >Pilih</button>
+                        <button  className="btn btn-primary me-2" id="pilih"  onClick=''>Pilih</button>
                         <a className="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target={'#card'+props.id} id="detail">Detail</a>
                     </div>
                 </div>
@@ -45,7 +44,7 @@ const Card = (props) => {
                         </div>
                         <div className="modal-footer">
                             <div className="card-button">
-                                <button  className="btn btn-primary me-2" id="pilih"  >Pilih</button>
+                                <button  className="btn btn-primary me-2" id="pilih" onClick='' >Pilih</button>
                                             
                                 <a className="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="detail">Detail</a>
                             </div>
