@@ -12,7 +12,6 @@
     border-radius: 20px;
     box-shadow: 0 0 5px gray;
 }
-
 .profil .kiri{
     padding: 20px;
     display: flex;
@@ -24,9 +23,21 @@
 }
 .profil .kiri img{
     padding: 10px;
-    width: 50%;
+    width: 75%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #11999E;
 }
 .profil .kanan{
+    color: #11999E ;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.profil .content{
     color: #11999E ;
     padding: 20px;
     width: 100%;
@@ -44,6 +55,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+.profil .kanan .section-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .profil .kiri h4{
     font-family: 'Nunito', sans-serif;
