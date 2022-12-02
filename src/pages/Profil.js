@@ -28,6 +28,7 @@ const Profil = () => {
     const [profile, setProfile] = useState([]);
     const [pview, setPview] = useState(false);
 
+    
     const profilFinal = profile.map((item)=> item.pview)
 
     const onClose = () => {
