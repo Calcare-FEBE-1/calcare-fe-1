@@ -74,7 +74,7 @@ const TrackKarbon = () => {
                         style={{ fontWeight: "bold", fontStyle: "normal" }}
                       >
                         {" "}
-                        <span className="fw-bold" id="hitung-cal"></span> Kg CO2
+                        <span className="fw-bold" id="hitung-cal"></span>{cart.totalCarbohydrate} Kg CO2
                       </p>
                     </div>
                   </div>
