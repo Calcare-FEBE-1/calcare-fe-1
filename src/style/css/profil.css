@@ -19,7 +19,7 @@
     align-items: center;
     width: 30%;
     border-radius: 20px 0 0 20px;
-    background-color: #AFEFE3;
+    /* background-color: #AFEFE3; */
 }
 .profil .kiri img{
     padding: 10px;
