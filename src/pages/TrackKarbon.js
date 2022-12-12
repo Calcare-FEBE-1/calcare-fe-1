@@ -82,24 +82,6 @@ const TrackKarbon = () => {
               </div>
             </div>
           </div>
-
-          <div
-            className="container section-button"
-            style={{ justifyContent: "center" }}
-          >
-            <img src={image1} width={150}></img>
-          </div>
-          <div
-            className="container section-link"
-            style={{ justifyContent: "center" }}
-          >
-            <p style={{ color: "#E65924" }} size={14}>
-              Anda belum memilih makanan hari ini di menu
-              <Link className="detail" to="/pilihMakanan">
-                pilih makanan
-              </Link>
-            </p>
-          </div>
         </div>
       </main>
       <Footer />
