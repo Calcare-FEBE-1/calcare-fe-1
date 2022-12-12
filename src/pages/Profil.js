@@ -181,7 +181,7 @@ const Profil = () => {
                     <div class="modal-content">
                       <div class="modal-header">
                         <h1 class=" modal-title " id="modal">
-                          Modal 1
+                          Edit Profil
                         </h1>
                         <button
                           type="button"
