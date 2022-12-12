@@ -49,7 +49,7 @@ const TrackKarbon = () => {
             </div>
           </div>
 
-          <div className="container section-track-kal p-3">
+          <div className="container section-track-kal mb-3">
             <div className="container track-left">
               <div className="card card-left" style={{ width: 750 }}>
                 <div className="row g-0">
