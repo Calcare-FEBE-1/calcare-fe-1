@@ -33,7 +33,7 @@ const Card = (props) => {
             </div>
           </div>
           <div className="card-footer">
-            <div className="card-button">
+            <div className="card-button d-flex justify-content-center">
               <button
                 className="btn btn-primary me-2"
                 id="pilih"
